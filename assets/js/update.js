@@ -66,13 +66,13 @@ let updateData = () => {
  third.innerHTML = message_clients;
  fourth.innerHTML = message_sales;
 
+
+
+}
+
  //PAFRTE 2
 
  let mensaje_cambios =  '<p class="mb-0"><span class="text-sm ${clase_cambio} font-weight-bolder"> ${porcentaje_de_cambio} </span> ${mensaje_tiempo} </p>' ;
-
-
-    }
-
 
     let updateDataCambios = () => {
 
@@ -114,20 +114,20 @@ let updateData = () => {
       let   porcentaje_de_cambio3 = (valor_actual3 - valor_previo3)*100/valor_previo3 ;
       let   porcentaje_de_cambio4 = (valor_actual4 - valor_previo4)*100/valor_previo4 ;
 
-      let clase_cambio1 = porcentaje_de_cambio1 > 0 ? "text-success" : "'text-danger";
-      let clase_cambio2 = porcentaje_de_cambio2 > 0 ? "text-success" : "'text-danger";
-      let clase_cambio3 = porcentaje_de_cambio3 > 0 ? "text-success" : "'text-danger";
-      let clase_cambio4 = porcentaje_de_cambio4 > 0 ? "text-success" : "'text-danger";
+      let clase_cambio1 = porcentaje_de_cambio1 > 0 ? "text-success" : "text-danger";
+      let clase_cambio2 = porcentaje_de_cambio2 > 0 ? "text-success" : "text-danger";
+      let clase_cambio3 = porcentaje_de_cambio3 > 0 ? "text-success" : "text-danger";
+      let clase_cambio4 = porcentaje_de_cambio4 > 0 ? "text-success" : "text-danger";
 
       porcentaje_de_cambio1 = Math.round(porcentaje_de_cambio1)
       porcentaje_de_cambio2 = Math.round(porcentaje_de_cambio2)
       porcentaje_de_cambio3 = Math.round(porcentaje_de_cambio3)
       porcentaje_de_cambio4 = Math.round(porcentaje_de_cambio4)
 
-      let mensaje_cambio1 = `<p class="mb-0"><span class="text-sm ${clase_cambio1} font-weight-bolder"> ${porcentaje_de_cambio1} </span> ${mensaje_tiempo1} </p>`;
-      let mensaje_cambio2 = `<p class="mb-0"><span class="text-sm ${clase_cambio2} font-weight-bolder"> ${porcentaje_de_cambio2} </span> ${mensaje_tiempo2} </p>`;
-      let mensaje_cambio3 = `<p class="mb-0"><span class="text-sm ${clase_cambio3} font-weight-bolder"> ${porcentaje_de_cambio3} </span> ${mensaje_tiempo3} </p>`;
-      let mensaje_cambio4 = `<p class="mb-0"><span class="text-sm ${clase_cambio4} font-weight-bolder"> ${porcentaje_de_cambio4} </span> ${mensaje_tiempo4} </p>`;
+      let mensaje_cambio1 = `<p class="mb-0"><span class="${clase_cambio1} text-sm font-weight-bolder"> ${porcentaje_de_cambio1}% </span> ${mensaje_tiempo1} </p>`;
+      let mensaje_cambio2 = `<p class="mb-0"><span class="${clase_cambio2} text-sm font-weight-bolder"> ${porcentaje_de_cambio2}% </span> ${mensaje_tiempo2} </p>`;
+      let mensaje_cambio3 = `<p class="mb-0"><span class="${clase_cambio3} text-sm font-weight-bolder"> ${porcentaje_de_cambio3}% </span> ${mensaje_tiempo3} </p>`;
+      let mensaje_cambio4 = `<p class="mb-0"><span class="${clase_cambio4} text-sm font-weight-bolder"> ${porcentaje_de_cambio4}% </span> ${mensaje_tiempo4} </p>`;
       
       
      let listOfElements = document.getElementsByClassName('card-footer p-3') 
